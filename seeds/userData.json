@@ -1,6 +1,22 @@
 [
-    {
-      "username": "TestUser",
-      "password": ""
-    }
+  {
+    "username": "Devin",
+    "email": "devtonn92@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Joseph",
+    "email": "josephmalonzo100@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Melisha",
+    "email": "melisha.evans06@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Trevor",
+    "email": "trevor.hanks89@gmail.com",
+    "password": "password12345"
+  }
   ]
