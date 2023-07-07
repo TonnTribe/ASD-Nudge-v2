@@ -1,48 +1,41 @@
-const { model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class News extends model {}
+class News extends Model {}
 
 News.init(
-  {
+    {
     // Manually define the primary key
     id: {
-      type: DataType.INTEGER,
-      allowNull: false,
-      primarykey: true,
-      autoncrement: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
     },
-
     title: {
-      type: DataType.STRING,
+        type: DataTypes.STRING,
     },
-
-    Date: {
-      type: DataType.STRING,
+    date: {
+        type: DataTypes.STRING,
     },
-
     description: {
-      type: DataType.STRING(1500),
+        type: DataTypes.STRING(1500),
     },
-
     image: {
-      type: DataType.STRING,
+        type: DataTypes.STRING,
     },
-
     link: {
-      type: DataType.STRING,
+        type: DataTypes.STRING,
+    }
     },
-  },
-
-  {
+    {
     sequelize,
     timestamps: false,
-
-    // prevent sequize from renaming the table
+    // Prevent sequelize from renaming the table
     freezeTableName: true,
     underscored: true,
-    ModelName: "news",
-  }
+    modelName: "news",
+    }
 );
 
-module.exports = News;
+module.exports=News;

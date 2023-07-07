@@ -1,0 +1,19 @@
+<div class="grid lg:grid-cols-3 p-10 gap-6 xl:gap-x-12 justify-center">
+
+{{#each games as |game|}}
+<div class="max-w-md rounded overflow-hidden shadow-lg">
+  <img class="w-full" src={{game.background_image}} alt="game illustration">
+  <div class="grid grid-cols-1 px-6 py-4 justify-center">
+    <div class="font-bold text-3xl mb-2">{{game.name}}</div>
+    <div class="text-l mb-2">Release Date: {{game.released}}</div>
+    <div class="flex text-l mb-2 items-center"><img class="w-20" src="https://logos-download.com/wp-content/uploads/2022/10/Metacritic_Logo.svg">: {{game.metacritic}}</div>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    {{#each game.genres as |genre|}}
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{genre}}</span>
+    {{/each}}
+  </div>
+</div>
+
+{{/each}}
+</div>
