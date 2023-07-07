@@ -1,6 +1,37 @@
 [
-    {
-      "username": "TestUser",
-      "password": ""
-    }
-  ]
+  {
+      "username": "put a name",
+      "email": "@email.com",
+      "password": "testpassword"
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "hellosidney"      
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "testpassword"
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "testpassword"
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "testpassword"
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "testpassword"
+  },
+  {
+      "username": "",
+      "email": "@email.com",
+      "password": "testpassword"
+  }
+]  

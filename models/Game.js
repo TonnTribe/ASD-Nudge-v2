@@ -1,51 +1,40 @@
-const { module, DataType } = require("sequelize");
-const sequelize = require("../config/connection");
-
-class Game extends Module {}
+class Game extends Model {}
 
 Game.init(
   {
     // Manually define the primary key
     id: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      primarykey: true,
-      autoncrement: true,
+      primaryKey: true,
+      autoIncrement: true,
     },
-
     name: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
-
     background_image: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
-
     description: {
-      type: DataType.STRING(3000),
+      type: DataTypes.STRING(3000),
     },
-
     released: {
-      type: DataType.STRING,
+      type: DataTypes.STRING,
     },
-
     metacritic: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
     },
-
     genres: {
-      type: DataType.STRING,
-    },
+      type: DataTypes.STRING,
+    }
   },
-
   {
     sequelize,
     timestamps: false,
-
-    // prevent sequize from renaming the table
+    // Prevent sequelize from renaming the table
     freezeTableName: true,
     underscored: true,
-    ModelName: "game",
+    modelName: "game",
   }
 );
 

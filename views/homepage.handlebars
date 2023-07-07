@@ -1,30 +1,317 @@
-{{#each blogs as |blog|}}
+<!-- searchbar start -->
 
-  <div class="row">
 
-    <div class="container blogBox">
-			<div class="row  justify-content-center headerRow">
-      <div class="col-8">
-        <h2>
-          <a class="blogTitle text-uppercase" href="/blog/{{blog.id}}">{{blog.title}}</a>
-        </h2>
-      </div>
+ <form>
 
-      <div class="col-4">
-        <p class="blogCreate text-right">Created by
-          {{blog.user.username}}
-          on
-          {{format_date blog.date_created}}
-        </p>
-      </div>
-			</div>
-    <div class="blogDesc">
-      <p class="text-center blogDescMain">
-        {{blog.description}}
-      </p>
+    <div class="bg-white py-3 sm:py-4 lg:py-8">
+        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="flex pb-6">
+        <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+        <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">Search by... <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(897px, 5637px, 0px);">
+            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+            <li>
+                <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Title</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Console</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Year</button>
+            </li>
+            <li>
+                <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Genre</button>
+            </li>
+            </ul>
+        </div>
+        <div class="relative w-full">
+            <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="What are you looking for?" required>
+            <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <span class="sr-only">Search</span>
+            </button>
+        </div>
     </div>
+</form> 
+
+<!-- searchbar end -->
+
+
+<section class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="flex flex-wrap justify-between mb-8 md:mb-16">
+        <div class="w-full lg:w-1/3 flex flex-col justify-center lg:pt-48 lg:pb-24 mb-6 sm:mb-12 lg:mb-0">
+            <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-8">Find your next<br />big adventure</h1>
+            <p class="max-w-md text-gray-500 xl:text-lg leading-relaxed">Browse through a vast selection of new and upcoming games, see what other users are playing, revisit an old classic––you decide! </p>
+        </div>
+
+        <div class="w-full lg:w-2/3 flex mb-12 md:mb-16">
+            <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden relative z-10 top-12 md:top-16 left-12 md:left-16 -ml-12 lg:ml-0">
+                <img src="../assets/img/GoW.jpeg" loading="lazy" alt="God of War Ragnarok cover art" class="w-full h-full object-cover object-center" />
+            </div>
+
+            <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                <img src="../assets/img/Diablo4.jpeg" loading="lazy" alt="Diablo 4 cover art" class="w-full h-full object-cover object-center" />
+            </div>
+        </div>
     </div>
 
+        <!-- social - start -->
+        <div class="flex justify-center lg:justify-start items-center gap-4">
+          <span class="text-gray-400 text-sm sm:text-base font-semibold tracking-widest uppercase">Social</span>
+          <span class="w-12 h-px bg-gray-200"></span>
+  
+          <div class="flex gap-4">
+            <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+  
+            <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              </svg>
+            </a>
+  
+            <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+              <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4168 2.4594C17.7648 0.873472 15.4785 0 12.9793 0C9.1616 0 6.81353 1.56493 5.51603 2.87767C3.91693 4.49547 3 6.64362 3 8.77138C3 11.4429 4.11746 13.4934 5.98876 14.2563C6.11439 14.3078 6.24081 14.3337 6.36475 14.3337C6.75953 14.3337 7.07233 14.0754 7.1807 13.661C7.24389 13.4233 7.39024 12.8369 7.45389 12.5823C7.59011 12.0795 7.48005 11.8377 7.18295 11.4876C6.64173 10.8472 6.38969 10.0899 6.38969 9.10438C6.38969 6.17698 8.56948 3.06578 12.6095 3.06578C15.8151 3.06578 17.8064 4.88772 17.8064 7.82052C17.8064 9.67124 17.4077 11.3852 16.6837 12.6468C16.1805 13.5235 15.2957 14.5685 13.9375 14.5685C13.3501 14.5685 12.8225 14.3272 12.4896 13.9066C12.1751 13.5089 12.0714 12.9953 12.1979 12.4599C12.3408 11.855 12.5357 11.2241 12.7243 10.6141C13.0682 9.5001 13.3933 8.44789 13.3933 7.60841C13.3933 6.17252 12.5106 5.20769 11.1969 5.20769C9.52737 5.20769 8.21941 6.90336 8.21941 9.06805C8.21941 10.1297 8.50155 10.9237 8.62929 11.2286C8.41896 12.1197 7.16899 17.4176 6.93189 18.4166C6.79478 18.9997 5.96893 23.6059 7.33586 23.9731C8.87168 24.3858 10.2445 19.8997 10.3842 19.3928C10.4975 18.9806 10.8937 17.4216 11.1365 16.4634C11.878 17.1775 13.0717 17.6603 14.2333 17.6603C16.4231 17.6603 18.3924 16.6749 19.7786 14.8858C21.1229 13.1505 21.8633 10.7318 21.8633 8.0757C21.8632 5.99923 20.9714 3.95209 19.4168 2.4594Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- social - end -->
+      </div>
+    </section>
   </div>
+  <!-- hero - end -->
+  
 
-{{/each}}
+  <!-- product-grid - start -->
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <!-- text - start -->
+      <div class="mb-10 md:mb-16">
+        <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Featured Games</h2>
+  
+        <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">Don't know where to start? Check out these popular titles!</p>
+      </div>
+      <!-- text - end -->
+  
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
+        <!-- product - start -->
+        <div>
+
+          <a href="/api/games/eldenring" class="group h-96 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+
+            <img src="../assets/img/EldenRing.jpeg" loading="lazy" alt="Elden Ring cover art" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+  
+            <div class="flex gap-2 absolute left-0 bottom-2">
+              <span class="bg-red-500 text-white text-sm font-semibold tracking-wider uppercase rounded-r-lg px-3 py-1.5">-50%</span>
+              <span class="bg-white text-gray-800 text-sm font-bold tracking-wider uppercase rounded-lg px-3 py-1.5">New</span>
+            </div>
+          </a>
+  
+          <div class="flex justify-between items-start gap-2 px-2">
+            <div class="flex flex-col">
+              <a href="#" class="text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100">Elden Ring</a>
+              <span class="text-gray-500">by FromSoftware</span>
+            </div>
+  
+            <div class="flex flex-col items-end">
+              <span class="text-gray-600 lg:text-xs font-bold">PS5, XBOXSX,PC</span>
+              <!-- <span class="text-red-500 text-sm line-through">$39.99</span> -->
+            </div>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+
+          <a href="/api/games/hogwarts" class="group h-96 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+
+            <img src="../assets/img/HL.jpg" loading="lazy" alt="Hogwarts Legacy cover art" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+
+            <div class="flex gap-2 absolute left-2 bottom-2">
+                <span class="bg-white text-gray-800 text-sm font-bold tracking-wider uppercase rounded-lg px-3 py-1.5">New</span>
+              </div>
+          </a>
+  
+          <div class="flex justify-between items-start gap-2 px-2">
+            <div class="flex flex-col">
+              <a href="#" class="text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100">Hogwarts Legacy</a>
+              <span class="text-gray-500">by Portkey Games</span>
+            </div>
+  
+            <div class="flex flex-col items-end">
+              <span class="text-gray-600 lg:text-xs font-bold">PS5, XBOXSX, PC</span>
+            </div>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group h-96 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+            <img src="../assets/img/HorizonFW.jpeg" loading="lazy" alt="Horizon Forbidden West cover art" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+          </a>
+  
+          <div class="flex justify-between items-start gap-2 px-2">
+            <div class="flex flex-col">
+              <a href="#" class="text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100">Horizon: Forbidden West</a>
+              <span class="text-gray-500">by Guerrilla Games</span>
+            </div>
+  
+            <div class="flex flex-col items-end">
+              <span class="text-gray-600 lg:text-xs font-bold">PS5, PS4</span>
+            </div>
+          </div>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+            <a href="#" class="group h-96 block bg-gray-100 rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+                <img src="../assets/img/SuicideSquad.jpg" loading="lazy" alt="Suicide Squad: Kill the Justice League cover art" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+                    
+                <div class="flex gap-2 absolute left-0 bottom-2">
+            <span class="bg-red-500 text-white text-sm font-semibold tracking-wider uppercase rounded-r-lg px-3 py-1.5">UPCOMING</span>
+            <span class="bg-white text-gray-800 text-sm font-bold tracking-wider uppercase rounded-lg px-3 py-1.5">New</span>
+          </div>
+        
+            </a>
+  
+
+          <div class="flex justify-between items-start gap-2 px-2">
+            <div class="flex flex-col">
+              <a href="#" class="text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100">Suicide Squad: Kill the Justice League</a>
+
+              <span class="text-gray-500">by Rocksteady Studios</span>
+            </div>
+  
+            <div class="flex flex-col items-end">
+              <span class="text-gray-600 lg:text-xs font-bold">PS5, XBOXSX, PC</span>
+            </div>
+          </div>
+        </div>
+        <!-- product - end -->
+      </div>
+    </div>
+  </div>
+  <!-- product-grid - end -->
+  
+  <!-- call to action - start -->
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <div class="md:h-80 flex flex-col sm:flex-row bg-gray-900 rounded-lg overflow-hidden">
+        <!-- content - start -->
+        <div class="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-4 sm:p-8">
+          <h2 class="text-white text-xl md:text-2xl lg:text-4xl font-bold mb-4">A collection full of this year's bestselling titles.</h2>
+  
+          <p class="max-w-md text-gray-400 mb-8"></p>
+  
+          <div class="mt-auto">
+            <a href="#" class="inline-block bg-white hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 text-gray-800 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Dive in!</a>
+          </div>
+        </div>
+        <!-- content - end -->
+  
+        <!-- image - start -->
+        <div class="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-auto order-first sm:order-none bg-gray-700">
+          <img src="/assets/img/zelda.jpg" loading="lazy" alt="Zelda_BOTW" class="w-full h-full object-cover object-center" />
+        </div>
+        <!-- image - end -->
+      </div>
+    </div>
+  </div>
+  <!-- call to action - end -->
+  
+  <!-- collections - start -->
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <!-- <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12">CHOOSE YOUR PATH</h2> -->
+  
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+        <!-- product - start -->
+        <div>
+
+          <a href="/api/games/top20" class="group h-96 flex items-end bg-gray-100 rounded-lg overflow-hidden shadow-lg relative p-4">
+
+            <img src="/assets/img/TombRaider_SC.jpg" loading="lazy" alt="Tomb Raider Graphic" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+            <div class="w-full flex flex-col bg-white text-center rounded-lg relative p-4">
+              <span class="text-gray-500">What are other users playing?</span>
+              <span class="text-gray-800 text-lg lg:text-xl font-bold">Most Popular</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group h-96 flex items-end bg-gray-100 rounded-lg overflow-hidden shadow-lg relative p-4">
+            <img src="/assets/img/GodofWar_SC.jpg" loading="lazy" alt="Kratos graphic" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+            <div class="w-full flex flex-col bg-white text-center rounded-lg relative p-4">
+              <span class="text-gray-500">Don't miss out!</span>
+              <span class="text-gray-800 text-lg lg:text-xl font-bold">Latest Releases</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group h-96 flex items-end bg-gray-100 rounded-lg overflow-hidden shadow-lg relative p-4">
+            <img src="/assets/img/Halo_SC.jpg" loading="lazy" alt="Halo graphic" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+            <div class="w-full flex flex-col bg-white text-center rounded-lg relative p-4">
+              <span class="text-gray-500">Looking for something specific?</span>
+              <span class="text-gray-800 text-lg lg:text-xl font-bold">Categories</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+  
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group h-96 flex items-end bg-gray-100 rounded-lg overflow-hidden shadow-lg relative p-4">
+            <img src="/assets/img/Witcher3_SC.jpg" loading="lazy" alt="Witcher 3 graphic" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+  
+            <div class="w-full flex flex-col bg-white text-center rounded-lg relative p-4">
+              <span class="text-gray-500">Open to anything?</span>
+              <span class="text-gray-800 text-lg lg:text-xl font-bold">Random Game</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+      </div>
+    </div>
+  </div>
+  <!-- collections - end -->
+  
+  <!-- newsletter - start -->
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+      <div class="flex flex-col lg:flex-row lg:justify-between items-center bg-gray-100 rounded-lg p-4 sm:p-8">
+        <div class="mb-4 sm:mb-8 lg:mb-0">
+          <h2 class="text-indigo-500 text-xl sm:text-2xl lg:text-3xl font-bold text-center lg:text-left">Get the latest updates</h2>
+          <p class="text-gray-500 text-center lg:text-left">Sign up for our newsletter</p>
+        </div>
+  
+        <div class="flex flex-col items-center lg:items-end">
+          <form class="w-full max-w-md flex gap-2 mb-3">
+            <input placeholder="Email" class="w-full flex-1 bg-gray-white text-gray-800 placeholder-gray-400 border border-gray-300 focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+  
+            <button class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2">Send</button>
+          </form>
+  
+          <p class="text-gray-400 text-xs text-center lg:text-right">By signing up to our newsletter you agree to our <a href="#" class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Term of Service</a> and <a href="#" class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- newsletter - end -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
