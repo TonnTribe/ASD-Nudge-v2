@@ -1,37 +1,22 @@
 [
   {
-      "username": "put a name",
-      "email": "@email.com",
-      "password": "testpassword"
+    "username": "Devin",
+    "email": "devtonn92@gmail.com",
+    "password": "password12345"
   },
   {
-      "username": "",
-      "email": "@email.com",
-      "password": "hellosidney"      
+    "username": "Joseph",
+    "email": "josephmalonzo100@gmail.com",
+    "password": "password12345"
   },
   {
-      "username": "",
-      "email": "@email.com",
-      "password": "testpassword"
+    "username": "Melisha",
+    "email": "melisha.evans06@gmail.com",
+    "password": "password12345"
   },
   {
-      "username": "",
-      "email": "@email.com",
-      "password": "testpassword"
-  },
-  {
-      "username": "",
-      "email": "@email.com",
-      "password": "testpassword"
-  },
-  {
-      "username": "",
-      "email": "@email.com",
-      "password": "testpassword"
-  },
-  {
-      "username": "",
-      "email": "@email.com",
-      "password": "testpassword"
+    "username": "Trevor",
+    "email": "trevor.hanks89@gmail.com",
+    "password": "password12345"
   }
-]  
+]
