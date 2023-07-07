@@ -1,8 +1,10 @@
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const router = require("express").Router();
+const userRoutes = require("./userRoutes");
+const gameRoutes = require("./gameRoutes")
+const newsRoutes = require("./newsRoutes")
 
-router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+router.use("/user", userRoutes);
+router.use("/game", gameRoutes);
+router.use("/news", newsRoutes);
 
 module.exports = router;
